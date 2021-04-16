@@ -14,5 +14,6 @@ The data set is organized into three folders (train, test, selection) and contai
 
 After we downloaded the data set we changed the amount of images in each folder so that we got a new structure. <br>
 
-![picture](https://github.com/Davidhct/Pneumonia-Detection-with-CNN/blob/main/images/date_structure.png)
+
+<kbd><img src="/images/date_structure.png" height="350"></kbd>
 
