@@ -65,3 +65,60 @@ After we downloaded the data set we changed the amount of images in each folder 
 
 ```
 
+# Model:
+
+```
+
+model = models.Sequential()
+
+model.add(layers.Conv2D(16,(3,3),activation = 'relu', padding='same',input_shape=(img_dims,img_dims,3)))
+model.add(layers.MaxPooling2D((2,2)))
+
+model.add(layers.Conv2D(32,(3,3),activation = 'relu', padding='same'))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D((2,2)))
+
+model.add(layers.Conv2D(64,(3,3),activation = 'relu', padding='same'))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D((2,2)))
+
+model.add(layers.Conv2D(128,(3,3),activation = 'relu', padding='same'))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D((2,2)))
+
+model.add(layers.Conv2D(256,(3,3),activation = 'relu', padding='same'))
+model.add(layers.BatchNormalization())
+model.add(layers.MaxPooling2D((2,2)))
+
+
+model.add(layers.Flatten())
+model.add(layers.Dense(units=128,activation='relu'))
+model.add(layers.Dropout(0.2))
+model.add(layers.Dense(units=1, activation='sigmoid'))
+
+```
+
+# result:
+
+Given that our processing power was very limited,<br>
+in addition we were limited in the amount of our data, the results were quite good..<br><br>
+
+<kbd><img src="/images/accuracy.png" height="350"></kbd>
+
+
+### We wanted to predict the test on our model and these are the results:<br>
+
+<kbd><img src="/images/Figure_2.png" height="350"></kbd>
+
+What you see below each picture is how close he was able to predict whether the photograph is with or without pneumonia.<br>
+And what's inside the parentheses are the real labels of the image that is,<br> 
+if the image with (0) actually means that the percentages next to it tell us how close it is that it detected that the image is without pneumonia.
+
+
+### Feature Maps and Filters:<br>
+##### Feature Maps:<br>
+<kbd><img src="/images/features map.png" height="350"></kbd>
+
+##### Filters:<br>
+
+<kbd><img src="/images/filters.png" height="350"></kbd>
