@@ -103,7 +103,8 @@ model.add(layers.Dense(units=1, activation='sigmoid'))
 Given that our processing power was very limited,<br>
 in addition we were limited in the amount of our data, the results were quite good..<br><br>
 
-<kbd><img src="/images/accuracy.png" height="350"></kbd>
+<kbd><img src="/images/accuracy.png" height="350"></kbd><br><br>
+<kbd><img src="/images/Figure_1.png" height="350"></kbd>
 
 
 ### We wanted to predict the test on our model and these are the results:<br>
